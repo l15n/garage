@@ -12,6 +12,7 @@ require "garage/controller_helper"
 require "garage/representer"
 require "garage/restful_actions"
 require "garage/hypermedia_filter"
+require "garage/resource_relations"
 
 require "garage/exceptions"
 require "garage/authorizable"
