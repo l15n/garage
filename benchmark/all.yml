@@ -1,0 +1,10 @@
+prelude: 'require File.expand_path("data.rb", ENV["PWD"])'
+benchmark:
+ 🐌...JSONAPI::Serializer: 'require File.expand_path("jsonapi-serializer.rb", ENV["PWD"]); run!'
+ 🐌...JSONAPI::Serializer(many): 'require File.expand_path("jsonapi-serializer.rb", ENV["PWD"]); run_many!'
+ 🐌...JSONAPI::Serializer(include): 'require File.expand_path("jsonapi-serializer.rb", ENV["PWD"]); run_include_all!'
+ 🐌...JSONAPI::Serializer(deep): 'require File.expand_path("jsonapi-serializer.rb", ENV["PWD"]); run_include_deep!'
+ active_model_serializers: 'require File.expand_path("ams.rb", ENV["PWD"]); run!'
+ active_model_serializers(many): 'require File.expand_path("ams.rb", ENV["PWD"]); run_many!'
+ active_model_serializers(include): 'require File.expand_path("ams.rb", ENV["PWD"]); run_include_all!'
+ active_model_serializers(deep): 'require File.expand_path("ams.rb", ENV["PWD"]); run_include_deep!'
