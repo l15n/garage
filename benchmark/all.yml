@@ -8,3 +8,7 @@ benchmark:
  active_model_serializers(many): 'require File.expand_path("ams.rb", ENV["PWD"]); run_many!'
  active_model_serializers(include): 'require File.expand_path("ams.rb", ENV["PWD"]); run_include_all!'
  active_model_serializers(deep): 'require File.expand_path("ams.rb", ENV["PWD"]); run_include_deep!'
+ garage: 'require File.expand_path("garage.rb", ENV["PWD"]); run!'
+ garage(many): 'require File.expand_path("garage.rb", ENV["PWD"]); run_many!'
+ garage(include): 'require File.expand_path("garage.rb", ENV["PWD"]); run_include_all!'
+ garage(deep): 'require File.expand_path("garage.rb", ENV["PWD"]); run_include_deep!'
