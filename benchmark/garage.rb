@@ -19,20 +19,21 @@ class BookResource
   end
 end
 
+class BenchmarkResponder < ActionController::Responder
+  include Garage::HypermediaResponder
+end
+
+def controller
+  @controller ||= OpenStruct.new({
+    :field_selector => Garage::NestedFieldQuery::Selector.build('*'),
+    :params => { fields: 'fields' },
+    :formats => [:json]
+  })
+end
+
 def run!
   # Fixture
-  responder_class = Class.new(ActionController::Responder) do
-    include Garage::HypermediaResponder
-  end
-
-  controller = OpenStruct.new({
-                                :field_selector => Garage::NestedFieldQuery::Selector.build('*'),
-                                :params => { fields: 'fields' },
-                                :formats => [:json]
-                              })
-
   resource = BookResource.new(DATA.sample)
-  responder = responder_class.new(controller, [resource])
-
+  responder = BenchmarkResponder.new(controller, [resource])
   responder.transform(resource)
 end
